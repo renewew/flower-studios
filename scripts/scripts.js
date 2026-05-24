@@ -1,29 +1,40 @@
-//Contadores
-let nums = document.querySelectorAll(".num");
-let container = document.querySelector(".fundacion");
+// Contadores
+const counterItems = document.querySelectorAll('[data-num]');
 
-let test = false; // when the function doesn't start
+if (counterItems.length) {
+    const animateCounter = (item) => {
+        if (item.dataset.counted === 'true') return;
+        item.dataset.counted = 'true';
 
-window.addEventListener('scroll', () => {
-    if (!container) return;
-    if (window.scrollY >= container.offsetTop - window.innerHeight * 1.8) {
-        if (!test) {
-            nums.forEach((e) => {
-                let start = 0;
-                let end = parseInt(e.dataset.num, 10) || 0;
+        const endValue = parseInt(item.dataset.num, 10) || 0;
+        let currentValue = 0;
+        const duration = 2000;
+        const stepTime = Math.max(20, duration / Math.max(endValue, 1));
 
-                let count = setInterval(() => {
-                    start++;
-                    e.textContent = start;
-                    if (start == end) {
-                        clearInterval(count);
-                    }
-                }, Math.max(20, 2000 / Math.max(end, 1)))
-            })
-        }
-        test = true;
-    }
-});
+        const counter = setInterval(() => {
+            currentValue += 1;
+            item.textContent = currentValue;
+            if (currentValue >= endValue) {
+                item.textContent = endValue;
+                clearInterval(counter);
+            }
+        }, stepTime);
+    };
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.25,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    counterItems.forEach(item => counterObserver.observe(item));
+}
 
 //Video
 const heroVideo = document.getElementById('heroVideo');
