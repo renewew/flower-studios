@@ -786,6 +786,10 @@ a {
     height: 50%;
 }
 
+.formulario .required {
+    color: red;
+}
+
 .formulario .button {
     width: 100%;
     margin-top: 22px;

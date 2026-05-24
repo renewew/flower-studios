@@ -333,7 +333,8 @@
                                 <p class="team-role">Especialista en Infraestructura</p>
                             </div>
                         </div>
-                        <p>Optimiza redes, seguridad y rendimiento para que los sistemas funcionen sin interrupciones.</p>
+                        <p>Optimiza redes, seguridad y rendimiento para que los sistemas funcionen sin interrupciones.
+                        </p>
                         <div class="team-socials">
                             <a href="#" aria-label="LinkedIn David"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" aria-label="GitHub David"><i class="fab fa-github"></i></a>
@@ -353,7 +354,8 @@
                         <p>Crea interfaces claras y atractivas que mejoran la experiencia de los usuarios finales.</p>
                         <div class="team-socials">
                             <a href="#" aria-label="LinkedIn René"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/renewew" aria-label="GitHub René"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/renewew" aria-label="GitHub René"><i
+                                    class="fab fa-github"></i></a>
                         </div>
                     </article>
 
@@ -367,7 +369,8 @@
                                 <p class="team-role">Coordinadora de Proyectos</p>
                             </div>
                         </div>
-                        <p>Conecta al cliente con el equipo y garantiza que cada entrega sea puntual y de alto valor.</p>
+                        <p>Conecta al cliente con el equipo y garantiza que cada entrega sea puntual y de alto valor.
+                        </p>
                         <div class="team-socials">
                             <a href="#" aria-label="LinkedIn Nahomi"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" aria-label="GitHub Nahomi"><i class="fab fa-github"></i></a>
@@ -513,36 +516,36 @@
                 </section>
 
                 <!--Formulario de contacto-->
-                <form class="formulario">
+                <form class="formulario" action="https://formspree.io/f/mykvdjel" method="POST">
                     <h3>Envíanos tu mensaje</h3>
                     <div class="form-group">
-                        <label for="nombre">Nombre(s):</label>
+                        <label for="nombre">Nombre(s): <span class="required">*</span></label>
                         <input id="nombre" name="nombre" type="text" placeholder="Tu/s nombre/s" class="textBox"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="apellido-paterno">Apellido paterno:</label>
+                        <label for="apellido paterno">Apellido paterno: <span class="required">*</span></label>
                         <input id="apellido-paterno" name="apellido_paterno" type="text"
                             placeholder="Tu apellido paterno" class="textBox" required>
                     </div>
                     <div class="form-group">
-                        <label for="apellido-materno">Apellido materno:</label>
+                        <label for="apellido materno">Apellido materno: <span class="required">*</span></label>
                         <input id="apellido-materno" name="apellido_materno" type="text"
                             placeholder="Tu apellido materno" class="textBox" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Correo electrónico:</label>
+                        <label for="email">Correo electrónico: <span class="required">*</span></label>
                         <input id="email" name="email" type="email" placeholder="usuario@correo.com" class="textBox"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
+                        <label for="telefono">Teléfono: <span class="required">*</span></label>
                         <input id="telefono" name="telefono" type="tel" placeholder="+52 667 925 4339" class="textBox"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="telefono">Mensaje:</label>
-                        <textarea placeholder="Opcional..." class="textBox"></textarea>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea placeholder="Opcional..." class="textBox" name="mensaje"></textarea>
                     </div>
                     <button type="submit" class="button">Enviar</button>
                 </form>
