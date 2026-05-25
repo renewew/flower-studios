@@ -516,7 +516,7 @@
                 </section>
 
                 <!--Formulario de contacto-->
-                <form class="formulario" action="phpmailer.php" method="POST">
+                <form class="formulario" action="https://formspree.io/f/mykvdjel" method="POST">
                     <h3>Envíanos tu mensaje</h3>
                     <div class="form-group">
                         <label for="nombre">Nombre(s): <span class="required">*</span></label>
@@ -544,8 +544,8 @@
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea placeholder="Opcional..." class="textBox" name="mensaje"></textarea>
+                        <label for="mensaje">Mensaje: <span class="required">*</span></label>
+                        <textarea placeholder="Ingresa cualquier mensaje..." class="textBox" name="mensaje" required></textarea>
                     </div>
                     <button type="submit" class="button">Enviar</button>
                 </form>
