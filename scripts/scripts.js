@@ -44,10 +44,10 @@ if (heroVideo) {
     // Deshabilitar feature de navegador: picture-in-picture y remote playback
     try {
         heroVideo.disablePictureInPicture = true;
-    } catch (e) { }
+    } catch (e) {}
     try {
         heroVideo.disableRemotePlayback = true;
-    } catch (e) { }
+    } catch (e) {}
     const playPromise = heroVideo.play();
     if (playPromise !== undefined) {
         playPromise.then(() => {
@@ -111,20 +111,20 @@ function openModal(modalData) {
 
 // Cerrar modal
 if (closeBtn) {
-    closeBtn.onclick = function () {
+    closeBtn.onclick = function() {
         modal.style.display = "none";
     }
 }
 
 // Cerrar el modal cuando se hace clic fuera de él
-window.addEventListener('click', function (event) {
+window.addEventListener('click', function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 });
 
 // Cerrar con la tecla ESC
-window.addEventListener('keydown', function (event) {
+window.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' || event.key === 'Esc') {
         if (modal && modal.style.display === 'block') modal.style.display = 'none';
     }
@@ -132,7 +132,7 @@ window.addEventListener('keydown', function (event) {
 
 // Detectar clic en cada producto y abrir el modal con los datos correctos
 document.querySelectorAll(".value-item").forEach(item => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click", function(e) {
         // evitar que enlaces internos intenten navegar
         e.preventDefault();
         const modalData = {
@@ -151,3 +151,9 @@ const enlaces = document.querySelector('#nav-links');
 hamburguesa.addEventListener('click', () => {
     enlaces.classList.toggle('show')
 })
+
+document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        enlaces.classList.remove('show');
+    });
+});
