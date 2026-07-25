@@ -75,7 +75,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observar elementos para animar
-document.querySelectorAll('.us-card, .service-item, .choose-card, .fundacion-item, .value-item, .team-card').forEach((el) => {
+document.querySelectorAll('.us-card, .service-item, .choose-card, .fundacion-item, .value-item, .team-card, .contact-item, .social-media, .formulario').forEach((el) => {
     el.classList.add('scroll-hidden');
     el.style.transition = "all 0.6s ease";
     observer.observe(el);
@@ -148,12 +148,15 @@ document.querySelectorAll(".value-item").forEach(item => {
 const hamburguesa = document.querySelector('#hamburger');
 const enlaces = document.querySelector('#nav-links');
 
+//Toggle del menú al hacer clic en la hamburguesa
 hamburguesa.addEventListener('click', () => {
     enlaces.classList.toggle('show')
 })
 
+//Cerrar el menú al hacer clic en un enlace
 document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         enlaces.classList.remove('show');
     });
 });
+

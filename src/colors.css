@@ -1,0 +1,25 @@
+/* Paleta profesional */
+:root {
+    --color-primary: #9A6CEF;
+    --color-primary-dark: #7F4DDC;
+    --color-secondary: #7DBBFF;
+    --color-accent: #E19AFF;
+    --color-accent-soft: #F6E2FF;
+    --color-accent-light: rgba(225, 154, 255, 0.18);
+
+    --color-bg: #EDF3FF;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #F0F4FB;
+    --color-border: #D8E2EE;
+    --color-text: #1F3051;
+    --color-text-light: #5F6F8A;
+
+    --gradient-main: linear-gradient(135deg, #7DBBFF 0%, #E19AFF 60%, #C58CFF 100%);
+    --gradient-accent: linear-gradient(135deg, #E19AFF 0%, #F6E2FF 100%);
+    --gradient-soft: linear-gradient(135deg, #F4F7FB 0%, #EEF4FC 100%);
+
+    --light-blue: rgba(255, 255, 255, 0.35);
+    --shadow-soft: 0 10px 30px rgba(29, 43, 65, 0.12);
+    --shadow-medium: 0 12px 34px rgba(29, 43, 65, 0.14);
+    --transition: 0.25s ease;
+}
