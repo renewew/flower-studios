@@ -15,27 +15,21 @@
     <title>Flower Studios</title>
 </head>
 
-<body>
-    <section id="inicio"></section>
+<body id="inicio">
     <!-- Menú de navegación -->
-    <nav class="navbar" aria-label="Menú principal" id="inicio">
+    <nav class="navbar" aria-label="Menú principal">
         <div class="logo">
             <a href="#"><img src="assets/icons/logo.png" alt="Flower Studios logo"></a>
             <h2>Flower Studios</h2>
         </div>
 
+        <button class="menu-btn" id="menu-btn">☰</button>
         <ul class="nav-links" id="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#valores">Valores</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </nav>
 
     <!-- Contenido principal -->
@@ -346,7 +340,7 @@
                         </div>
                         <p>Crea interfaces claras y atractivas que mejoran la experiencia de los usuarios finales.</p>
                         <div class="team-socials">
-                            <a href="#" aria-label="LinkedIn René"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/in/rene-martinez-rene-martinez-4a2767426" aria-label="LinkedIn René"><i class="fab fa-linkedin-in"></i></a>
                             <a href="https://github.com/renewew" aria-label="GitHub René"><i
                                     class="fab fa-github"></i></a>
                         </div>
@@ -479,35 +473,41 @@
                     <h3 class="section-tag">Contáctanos</h3>
                     <h2>Contáctanos y contrata nuestros servicios</h2>
                 </section>
-                <section class="contact-grid">
-                    <!--Formas de como contactar a la empresa-->
-                    <section class="contact-content">
-                        <section class="contact-info">
-                            <article class="contact-item">
+                <!--Formas de como contactar a la empresa-->
+                <section class="contact-content">
+                    <section class="contact-grid">
+                        <article class="contact-item">
+                            <div>
+                                <h3 class="badge"><i class="fa-solid fa-at"></i> Correo Electrónico</h3>
+                                <p>flowerstudios@outlook.es</p>
+                            </div>
+                        </article>
+
+                        <article class="contact-item">
+                            <div>
+                                <h3 class="badge"><i class="fas fa-phone"></i>Teléfono</h3>
+                                <p>+52 667 925 4339</p>
+                            </div>
+                        </article>
+
+                        <article class="contact-item">
                                 <div>
-                                    <h3 class="badge"><i class="fa-solid fa-at"></i> Correo Electrónico</h3>
-                                    <p>flowerstudios@outlook.es</p>
+                                    <h3 class="badge"><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                                    <p>Calle Alexander Graham Bell #18114, Col. Nuevo Cajeme, Mazatlán, Sinaloa, México.
+                                    </p>
                                 </div>
                             </article>
 
-                            <article class="contact-item">
-                                <div>
-                                    <h3 class="badge"><i class="fas fa-phone"></i>Teléfono</h3>
-                                    <p>+52 667 925 4339</p>
-                                </div>
-                            </article>
-
-                            <article class="social-media">
-                                <h3 class="badge"><i class="fa-solid fa-inbox"></i> Redes Sociales</h3>
-                                <div class="social-icons">
-                                    <a href="" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
-                                    <a href="https://x.com/flowerstudios_?s=11" class="social-icon twitter"><i
-                                            class="fa-brands fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/flower.studios._?igsh=dmRpc3ZiYXIyYmM2&utm_source=qr"
-                                        class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
-                                </div>
-                            </article>
-                        </section>
+                        <article class="social-media">
+                            <h3 class="badge"><i class="fa-solid fa-inbox"></i> Redes Sociales</h3>
+                            <div class="social-icons">
+                                <a href="" class="social-icon facebook"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://x.com/flowerstudios_?s=11" class="social-icon twitter"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/flower.studios._?igsh=dmRpc3ZiYXIyYmM2&utm_source=qr"
+                                    class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </article>
                     </section>
 
                     <!--Formulario de contacto-->
@@ -524,9 +524,9 @@
                                 placeholder="Tu apellido paterno" class="textBox" required>
                         </div>
                         <div class="form-group">
-                            <label for="apellido materno">Apellido materno:</label>
+                            <label for="apellido materno">Apellido materno: <span class="required">*</span></label>
                             <input id="apellido-materno" name="apellido_materno" type="text"
-                                placeholder="Tu apellido materno" class="textBox">
+                                placeholder="Tu apellido materno" class="textBox" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Correo electrónico: <span class="required">*</span></label>
@@ -546,6 +546,7 @@
                         <button type="submit" class="button">Enviar</button>
                     </form>
                 </section>
+
             </section>
         </section>
     </main>
